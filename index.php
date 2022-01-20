@@ -89,7 +89,7 @@ Util::banCheck();
                 <span>user info</span>
             </div>
             welcome, <a href="/profile.php" style="color:rgb(255, 84, 241);"><?php Util::display($username) ?></a> (uid: <?php Util::display($uid); ?>)<br>
-            your inviter : <a href="/profile.php" style="color:rgb(255, 84, 241);"><?php Util::display($invitedBy) ?></a><br>
+            your inviter : <a href="https://website.cc/" style="color:rgb(255, 84, 241);"><?php Util::display($invitedBy) ?></a><br>
 
             <div class="inner">
                 <div class="separator">
