@@ -38,6 +38,7 @@ ex.
 -	private $dbName = "dbname";
 
 4. done... go to your domain and enjoy?
+- login admin:admin
 
 credits: znix
 original project: https://github.com/znixbtw/panel-v2
