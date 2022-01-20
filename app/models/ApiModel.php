@@ -17,6 +17,12 @@ class API extends Database {
 		
 		// If username is correct
 		if ($row) {
+			
+			if (strtotime($row->sub) > strtotime('now')) {
+			    $has_sub = true;
+			} else {
+			    $has_sub = false;
+			}
 
 			$hashedPassword = $row->password;
 
@@ -36,7 +42,7 @@ class API extends Database {
 					'username' => $row->username,
 					'hwid' => $row->hwid,
 					'admin' => $row->admin,
-					'sub' => $row->sub,
+					'sub' => $has_sub,
 					'banned' => $row->banned,
 					'invitedBy' => $row->invitedBy,
 					'createdAt' => $row->createdAt
