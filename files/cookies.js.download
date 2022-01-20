@@ -1,0 +1,1 @@
+window.cookieconsent.initialise({container:document.body,revokable:true,dismissOnWindowClick:true,onStatusChange:function(status){console.log(this.hasConsented()?location.reload():(location.href="https://google.com"));},law:{regionalLaw:true,},location:true,});
