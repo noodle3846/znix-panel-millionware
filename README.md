@@ -1,5 +1,5 @@
 # znix-panel-millionware
-znix panel v2 with millionware theme
+znix panel v2 with millionware themed
 
 project incomplete
 
