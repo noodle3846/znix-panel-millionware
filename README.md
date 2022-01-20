@@ -1,7 +1,7 @@
 # znix-panel-millionware
 znix panel v2 with millionware themed
 
-project incomplete
+edit incomplete
 
 to do
 - add discord linking
