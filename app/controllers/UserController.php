@@ -17,7 +17,7 @@ class UserController extends Users {
 		//Session::set("hwid", $user->hwid);
 		Session::set("admin", (int) $user->admin);
 		Session::set("banned", (int) $user->banned);
-		//Session::set("invitedBy", $user->invitedBy);
+		Session::set("invitedBy", $user->invitedBy);
 		//Session::set("createdBy", $user->createdBy);
 
 	}

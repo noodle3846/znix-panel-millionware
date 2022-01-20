@@ -11,6 +11,7 @@ Session::init();
 if (!Session::isLogged()) { Util::redirect('/login.php'); }
 
 $username = Session::get("username");
+$invitedBy = Session::get("invitedBy");
 $sub = $user->getSubStatus();
 $uid = Session::get("uid");
 
@@ -88,7 +89,7 @@ Util::banCheck();
                 <span>user info</span>
             </div>
             welcome, <a href="/profile.php" style="color:rgb(255, 84, 241);"><?php Util::display($username) ?></a> (uid: <?php Util::display($uid); ?>)<br>
-            your inviter: <a href="https://website.cc/" style="color:rgb(255, 84, 241);">soon...</a><br>
+            your inviter : <a href="https://website.cc/" style="color:rgb(255, 84, 241);"><?php Util::display($invitedBy) ?></a><br>
 
             <div class="inner">
                 <div class="separator">
