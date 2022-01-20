@@ -42,7 +42,8 @@ credits: znix
 original project: https://github.com/znixbtw/panel-v2
 
 preview login:
-https://imgur.com/VxC0miP
+![image](https://user-images.githubusercontent.com/98117900/150399428-6a3f3e1d-8df0-4039-a6d6-420eb296e170.png)
+
 
 preview panel:
-https://imgur.com/TKCDSGX
+![image](https://user-images.githubusercontent.com/98117900/150399405-ab552d6e-60db-473f-9b7b-a990051c56b1.png)
