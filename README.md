@@ -41,6 +41,7 @@ ex.
 - login admin:admin
 
 credits: znix
+
 original project: https://github.com/znixbtw/panel-v2
 
 preview login:
