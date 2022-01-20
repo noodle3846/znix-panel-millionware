@@ -7,6 +7,7 @@ to do
 - add discord linking
 - add admin panel redirect button for staff
 - reseller panel?? maybe...
+- add landing page (must go to login.php and register.php manually for now.)
 
 the project is still useable but is missing some features from millionware
 - viewing other user profiles
