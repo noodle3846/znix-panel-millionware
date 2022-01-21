@@ -123,6 +123,11 @@ Util::banCheck();
             <span>management</span><br>
 
             <a href="https://website.cc/panel#" onclick="show_invites()">show my invites</a>
+	    <?php if (Session::isAdmin() == true) : ?>
+		<br>
+		<a class="nav-link" href="<?= SUB_DIR ?>/admin">admin panel</a>
+
+	    <?php endif; ?>
         </div>
     </div>
     <div class="panel-card stats" style="width: 300px">
