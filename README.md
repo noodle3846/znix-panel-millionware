@@ -39,7 +39,7 @@ ex.
 4. done... go to your domain and enjoy?
 - login admin:admin
 
-credits: znix, Jasmisek ("invited by" pull request)
+credits: znix, Jasmisek (pull requests)
 
 original project: https://github.com/znixbtw/panel-v2
 
@@ -47,5 +47,5 @@ preview login:
 ![image](https://user-images.githubusercontent.com/98117900/150399428-6a3f3e1d-8df0-4039-a6d6-420eb296e170.png)
 
 
-preview panel:
-![image](https://user-images.githubusercontent.com/98117900/150399405-ab552d6e-60db-473f-9b7b-a990051c56b1.png)
+preview panel: (ss by Jasmisek)
+![image](https://user-images.githubusercontent.com/98117900/150622664-57da83ea-9b3b-46d0-acee-d5090b4b9847.png)
