@@ -39,7 +39,7 @@ ex.
 4. done... go to your domain and enjoy?
 - login admin:admin
 
-credits: znix, Jasmisek (pull requests)
+credits: znix, Jasmisek (pull requests), duxe
 
 original project: https://github.com/znixbtw/panel-v2
 
