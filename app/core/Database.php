@@ -16,7 +16,7 @@ class Database {
 			
 			$dsn = 'mysql:host=' . $this->dbHost . ';dbname=' . $this->dbName;
 			$pdo = new PDO($dsn, $this->dbUser, $this->dbPass);
-			$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+			$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ, PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	//	PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION is needed for catching PDO driver errors
 			return $pdo;
 			
 		} catch(PDOException $e) {

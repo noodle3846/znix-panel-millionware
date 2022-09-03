@@ -41,7 +41,8 @@ class UserController extends Users {
 		$invCode = trim($data['invCode']);
 
 		// Empty error vars
-		$userError = $passError = "";
+		$passError = "";
+		$userError = "";
 		$usernameValidation = "/^[a-zA-Z0-9]*$/";
 
 		// Validate username on length and letters/numbers
@@ -55,11 +56,11 @@ class UserController extends Users {
 
 		} elseif (strlen($username) > 14) {
 
-			return $userError  = "Username is too long.";
+			return "Username is too long.";
 
 		} elseif (!preg_match($usernameValidation, $username)) {
 
-			return $userError  = "Username must only contain alphanumericals!";
+			return "Username must only contain alphanumericals!";
 
 		} else {
 
@@ -67,7 +68,7 @@ class UserController extends Users {
 			$userExists = $this->usernameCheck($username);
 			if ($userExists) {
 
-				return $userError  = "Username already exists, try another.";
+				return "Username already exists, try another.";
 	
 			}
 
@@ -77,11 +78,11 @@ class UserController extends Users {
 		// Validate password on length
 		if (empty($password)) {
 
-			return $passError  = "Please enter a password.";
+			return "Please enter a password.";
 
 		} elseif (strlen($password) < 4) {
 
-			return $passError  = "Password is too short.";
+			return "Password is too short.";
 
 		} 
 
@@ -89,7 +90,7 @@ class UserController extends Users {
 		// Validate invCode
 		if (empty($invCode)) {
 
-			return $invCodeError  = "Please enter an invite code.";
+			return  "Please enter an invite code.";
 
 		} else {
 
@@ -98,32 +99,30 @@ class UserController extends Users {
 
 			if (!$invCodeExists) {
 
-				return $invCodeError  = "Invite code is invalid or already used.";
+				return "Invite code is invalid or already used.";
 
 			}
 
 		}
 
 
-		// Check if all errors are empty
-		if (empty($userError) && empty($passError) && empty($invCodeError) && empty($userExistsError)  && empty($invCodeError)) {
+		// There is no need for checking the variables as this code would be unreachable
+		// after returning the error
 
-			// Hashing the password
-			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+		// Hashing the password
+		$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-			$result = $this->register($username, $hashedPassword, $invCode);
+		$result = $this->register($username, $hashedPassword, $invCode);
 
-			// Session start
-			if ($result) {
+		// Session start
+		if ($result) {
 
-				Util::redirect('/login.php');
+			Util::redirect('/login.php');
 
-			} else {
+		} else {
 
-				return 'Something went wrong.';
-				
-			}
-
+			return 'Something went wrong.';
+			
 		}
 
 	}
