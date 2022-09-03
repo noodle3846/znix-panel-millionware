@@ -18,7 +18,7 @@ if (empty($_GET['user']) || empty($_GET['pass']) || empty($_GET['hwid']) || empt
 	$hwidHash = $_GET['hwid'];
 	$key = $_GET['key'];
 
-	if (API_KEY === $key) {
+	if ( hash_equals( API_KEY, $key )) {	// Use hash_equals for protection from timing based attacks when comparing critical strings
 
 		// decode
 		$password = base64_decode($passwordHash);

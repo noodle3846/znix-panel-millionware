@@ -18,28 +18,31 @@ class Session {
 
     public static function get($key) {
 
-		return (isset($_SESSION[$key])) ? $_SESSION[$key] : false;
+		return (array_key_exists($key, $_SESSION) && is_string($_SESSION[$key])) ? $_SESSION[$key] : false;	//	isset($_SESSION[$key]) will return undefined index, if the key doesn't exist in the array
 			
 	}
 
 
 	public static function isLogged() {
 
-		return (isset($_SESSION["login"]) && $_SESSION["login"] === true) ? true : false;
+		return (array_key_exists($key, $_SESSION) && is_bool($_SESSION[$key]) && $_SESSION[$key] !== false); // Maintains the same logic as earlier. It's just a good practice to do integrity checks every now and then.
 
 	}
 
 
 	public static function isAdmin() {
 
-		return (isset($_SESSION["login"]) && $_SESSION["admin"] === 1) ? true : false;
+		return (array_key_exists("login", $_SESSION) && isset($_SESSION["login"]) && intval($_SESSION["admin"]) === 1); // Maintains the same logic as earlier
 
 	}
 
 
 	public static function isBanned() {
 
-		return (isset($_SESSION["login"]) && $_SESSION["banned"] === 1 && $_SESSION["admin"] === 0) ? true : false;
+		return (array_key_exists("login", $_SESSION)	// In case you don't want your php error log to be flooded with undefined index notices at some point :)
+				&& isset( $_SESSION["login"] )
+				&& intval( $_SESSION["banned"] ) === 1
+				&& intval( $_SESSION["admin"] ) === 0);
 
 	}
 

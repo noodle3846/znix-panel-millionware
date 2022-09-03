@@ -14,6 +14,6 @@ if ($user->getSubStatus() <= 0) { Util::redirect('/'); }
 
 $cheat = Util::randomCode(5);
 
-header('Content-type: application/x-dosexec');
+header('Content-type: application/octet-stream');	//	Standard for binaries
 header('Content-Disposition: attachment; filename="'.$cheat.'".exe"');
 readfile(LOADER_URL);
